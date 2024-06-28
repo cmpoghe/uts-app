@@ -1,0 +1,27 @@
+<!-- <div>
+    <h2>Coordinate Input</h2>
+    <form (ngSubmit)="checkProximity()">
+      <div *ngFor="let location of locations; let i = index">
+        <h3>{{location.name}}</h3>
+        <label for="latitude-{{i}}">Latitude:</label>
+        <input type="number" id="latitude-{{i}}" [(ngModel)]="location.latitude" name="latitude-{{i}}" (input)="updateLatitude($event, i)" required>
+        <br>
+        <label for="longitude-{{i}}">Longitude:</label>
+        <input type="number" id="longitude-{{i}}" [(ngModel)]="location.longitude" name="longitude-{{i}}" (input)="updateLongitude($event, i)" required>
+        <br>
+        <p>Coordinates: {{location.latitude}}°N {{location.longitude}}°E</p>
+      </div>
+      <button type="submit">Check Proximity</button>
+    </form>
+    <div *ngIf="proximityMessage">
+      <h3>{{ proximityMessage }}</h3>
+    </div>
+  </div>
+   -->
+   <div>
+    <h2>Location Check</h2>
+    <p *ngIf="userLocation">User Location: {{userLocation.latitude}}°N, {{userLocation.longitude}}°E</p>
+    <p *ngIf="proximityMessage"><Span><b>Massage:</b></Span><b style="color: red;">{{proximityMessage}}</b></p>
+  </div>
+  
+  
